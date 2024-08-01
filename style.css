@@ -28,7 +28,12 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visibility */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: border to enhance the frosted effect */
 }
-
+.calendar-copyright {
+    text-align: center;
+    font-size: 12px; /* Adjust as needed */
+    color: #666; /* Adjust as needed */
+    margin-top: 10px; /* Adjust as needed */
+}
 
 /* Reload button styling */
 #reload-button {
