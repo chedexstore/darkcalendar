@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Minimalist Calendar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Your custom styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Agrandir+Wide&family=DM+Sans&family=Noto+Serif+Display:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock" id="clock">--:--:--</div>
+        <div class="timezone" id="timezone">Timezone</div>
+    </div>
+    <div class="container" id="calendar-container">
+        <!-- Reload Button -->
+        <div id="reload-button">
+            <i class="fas fa-sync-alt"></i> <!-- Font Awesome reload icon -->
+        </div>
+
+        <div class="header" id="header">
+            <button id="prev-year" class="nav-controls">&lt;&lt;</button>
+            <button id="prev-month" class="nav-controls">&lt;</button>
+            <div id="calendar-header"></div>
+            <button id="next-month" class="nav-controls">&gt;</button>
+            <button id="next-year" class="nav-controls">&gt;&gt;</button>
+        </div>
+        <div class="weekdays">
+            <div class="day-name">Sun</div>
+            <div class="day-name">Mon</div>
+            <div class="day-name">Tue</div>
+            <div class="day-name">Wed</div>
+            <div class="day-name">Thu</div>
+            <div class="day-name">Fri</div>
+            <div class="day-name">Sat</div>
+        </div>
+        <div class="calendar" id="calendar"></div>
+        
+        <!-- Add this new div below the calendar -->
+        <div class="calendar-copyright">
+            &copy; 2024 CheDex Online Store
+        </div>
+    </div>
+
+    <!-- Dialog for Event Management -->
+    <div id="event-dialog">
+        <div id="dialog-header">
+            <span id="dialog-date"></span>
+            <button id="close-dialog">X</button>
+        </div>
+        <div id="dialog-content">
+            <input id="dialog-event-input" type="text" placeholder="add event..." />
+            <button id="dialog-add-event" class="enter-button">enter</button>
+        </div>
+        <ul id="dialog-event-list"></ul>
+    </div>
+
+    <!-- Modal for event details -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <input type="text" id="event-input" placeholder="Add event..." />
+            <button id="add-event">Enter</button>
+            <ul id="event-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Your JavaScript file -->
+</body>
+</html>
